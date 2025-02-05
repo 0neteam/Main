@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>유통 시스템 관리 prj2</title>
+
+    <style>
+        body {
+            background-color: #f0f0f0; /* 배경색 설정 */
+            font-family: 'Arial', sans-serif; /* 기본 글꼴 설정 */
+            color: #333333; /* 글자 색상 */
+            margin: 0;
+            padding: 0;
+        }
+
+        .loginscreen2 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .direct {
+            display: inline-block;
+            margin: 20px;
+            text-align: center;
+        }
+
+        .button {
+            display: block;
+            background-color: #333; 
+            color: white; 
+            padding: 40px;
+            border-radius: 5px;
+            text-decoration: none;
+            width: 150px; 
+            text-align: center;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .button:hover {
+            background-color: #4c9e50; 
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 600px;
+            margin-top: 20px;
+        }
+
+        .image-container .direct {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-container h2 {
+            font-size: 1.2rem;
+            color: #555555;
+            font-weight: bold;
+            margin-top: 10px; 
+        }
+
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        .topnav a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+
+
+
+    </style>
+</head>
+
+<body>
+
+    <div class="topnav">   
+        <a href="#">개발</a>  
+        <a href="#">AWS</a>
+    </div>
+
+    <div class="text-center loginscreen2">
+       <h1> 유통관리 </h1> 
+        
+        <div class="image-container">
+            <div class="direct facebook">
+                <a href="https://stg.0neteam.co.kr" class="button">
+                    (운영)창고
+                </a>
+            </div>
+            <div class="direct twitter">
+                <a href="https://mfr.0neteam.co.kr" class="button">
+                    (운영)제조사
+                </a>
+            </div>
+        </div>
+
+        <div class="image-container">
+            <div class="direct facebook">
+                <a href="https://stg.0neteam.co.kr" class="button">
+                    (개발)창고
+                </a>
+            </div>
+            <div class="direct twitter">
+                <a href="https://mfr.0neteam.co.kr" class="button">
+                    (개발)제조사
+                </a>
+            </div>
+        </div>
+
+        <div class="clear"></div>
+        <p class="m-t"> <small></small> </p>
+    </div>
+
+</body>
+</html>
