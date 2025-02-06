@@ -1,133 +1,104 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>유통 시스템 관리 prj2</title>
-
+    <title>prj</title>
+    <!-- 부트스트랩 CSS 링크 -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            background-color: #f0f0f0; /* 배경색 설정 */
-            font-family: 'Arial', sans-serif; /* 기본 글꼴 설정 */
-            color: #333333; /* 글자 색상 */
-            margin: 0;
-            padding: 0;
+            padding-top: 20px;
         }
-
-        .loginscreen2 {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+        .navbar {
+            margin-bottom: 20px;
         }
-
-        .direct {
-            display: inline-block;
-            margin: 20px;
-            text-align: center;
-        }
-
-        .button {
-            display: block;
-            background-color: #333; 
-            color: white; 
-            padding: 40px;
-            border-radius: 5px;
-            text-decoration: none;
-            width: 150px; 
-            text-align: center;
-            font-weight: bold;
-            border: none;
-            cursor: pointer;
-            font-size: 1rem;
-        }
-
-        .button:hover {
-            background-color: #4c9e50; 
-        }
-
-        .image-container {
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
-            max-width: 600px;
-            margin-top: 20px;
-        }
-
-        .image-container .direct {
-            flex: 1;
+        .button-container {
             display: flex;
             justify-content: center;
             align-items: center;
+            height: 40vh; /* 버튼들이 차지하는 세로 공간을 더 줄임 */
         }
-
-        .image-container h2 {
-            font-size: 1.2rem;
-            color: #555555;
-            font-weight: bold;
-            margin-top: 10px; 
-        }
-
-        .topnav {
-            overflow: hidden;
-            background-color: #333;
-        }
-
-        .topnav a {
-            float: left;
-            display: block;
-            color: #f2f2f2;
+        .btn {
+            width: 150px;
+            height: 300px; /* 버튼의 세로 길이를 두 배로 늘림 */
+            margin: 10px;
+            font-size: 16px;
             text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px; /* 버튼 모서리를 둥글게 */
+            color: white; /* 글씨 색상 */
+            font-weight: bold;
+            transition: background 0.3s ease;
         }
 
+        /* 그라데이션 효과 적용 */
+        .btn-primary {
+            background-image: linear-gradient(to right, #00c6ff, #0072ff); /* 파란색 그라데이션 */
+        }
+        .btn-info {
+            background-image: linear-gradient(to right, #00b09b, #96c93d); /* 청록색-녹색 그라데이션 */
+        }
+        .btn-warning {
+            background-image: linear-gradient(to right, #ff7e5f, #feb47b); /* 핑크-오렌지 그라데이션 */
+        }
+        .btn-success {
+            background-image: linear-gradient(to right, #56ab2f, #a8e063); /* 초록색 그라데이션 */
+        }
 
+        .select-container {
+            width: 250px;
+            margin: 10px auto;
+        }
+        .title {
+            text-align: center;
+            margin-bottom: 40px; /* 제목과 버튼 사이의 간격 조정 */
+            padding-top: 100px; /* 유통관리 제목 위에 패딩을 두 배로 늘림 */
+            font-size: 108px; /* 글씨 크기를 3배로 늘림 */
+            font-weight: bold;
+            background-image: linear-gradient(to right, #00c6ff, #0072ff); /* 파란색 그라데이션 */
+            -webkit-background-clip: text; /* 텍스트에 배경 그라데이션 적용 */
+            color: transparent; /* 글씨 색을 투명으로 설정하여 그라데이션이 보이게 */
+        }
 
-
+        /* 버튼에 마우스를 올렸을 때 그라데이션이 변하도록 */
+        .btn:hover {
+            filter: brightness(1.2); /* 마우스 올렸을 때 밝기 증가 */
+        }
     </style>
 </head>
-
 <body>
 
-    <div class="topnav">   
-        <a href="#">개발</a>  
-        <a href="#">AWS</a>
+    <!-- 상단바를 셀렉트 박스로 변경 -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="select-container">
+            <select class="custom-select">
+                <option value="aws">AWS</option>
+                <option value="dev">개발</option>
+            </select>
+        </div>
+    </nav>
+
+    <!-- 유통관리 제목을 버튼 위로 이동 -->
+    <div class="title">유통관리</div>
+
+    <!-- 본문 콘텐츠 -->
+    <div class="container">
+        <div class="button-container">
+            <!-- 링크 적용된 버튼들 -->
+            <a href="http://stg.0neteam.co.kr/" target="_blank" class="btn btn-primary">운영 창고</a>
+            <a href="http://mfr.0neteam.co.kr/" target="_blank" class="btn btn-info">개발 제조사</a>
+            <a href="http://stg.0neteam.co.kr/" target="_blank" class="btn btn-warning">창고 제조사</a>
+            <a href="http://mfr.0neteam.co.kr/" target="_blank" class="btn btn-success">제조사</a>
+        </div>
     </div>
 
-    <div class="text-center loginscreen2">
-       <h1> 유통관리 </h1> 
-        
-        <div class="image-container">
-            <div class="direct facebook">
-                <a href="https://stg.0neteam.co.kr" class="button" target="_blank">
-                    (운영)창고
-                </a>
-            </div>
-            <div class="direct twitter">
-                <a href="https://mfr.0neteam.co.kr" class="button" target="_blank">
-                    (운영)제조사
-                </a>
-            </div>
-        </div>
-
-        <div class="image-container">
-            <div class="direct facebook">
-                <a href="https://dstg.0neteam.co.kr" class="button" target="_blank">
-                    (개발)창고
-                </a>
-            </div>
-            <div class="direct twitter">
-                <a href="https://dmfr.0neteam.co.kr" class="button" target="_blank">
-                    (개발)제조사
-                </a>
-            </div>
-        </div>
-
-        <div class="clear"></div>
-        <p class="m-t"> <small></small> </p>
-    </div>
+    <!-- 부트스트랩 JS 및 Popper.js 링크 -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
 </html>
